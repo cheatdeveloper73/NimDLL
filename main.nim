@@ -10,7 +10,6 @@ proc DllMain(hModule: HINSTANCE, reasonForCall: DWORD, lpReserved: LPVOID): WINB
         of DLL_PROCESS_ATTACH:
             NimMain()
             DisableThreadLibraryCalls(hModule)
-            #CreateThread(nil, nil, cast[LPTHREAD_START_ROUTINE](mainThread), cast[LPVOID](hModule), nil, nil)
             MessageBox(0, "Sucessful Injection.")
 
         of DLL_PROCESS_DETACH:
