@@ -1,11 +1,5 @@
-# --gc:arc --NoMain --app:lib --cpu:i386
 import winim/com
 import winim
-
-#proc mainThread(hModule: HINSTANCE) =
-#    AllocConsole()
-#    discard stdout.reopen("CONOUT$", fmWrite)
-#    MessageBox(0, "Sucessful Injection.", 0)
 
 proc NimMain() {.cdecl, importc.}
 
