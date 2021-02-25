@@ -10,7 +10,7 @@ proc DllMain(hModule: HINSTANCE, reasonForCall: DWORD, lpReserved: LPVOID): WINB
         of DLL_PROCESS_ATTACH:
             NimMain()
             DisableThreadLibraryCalls(hModule)
-            MessageBox(0, "Sucessful Injection.")
+            MessageBox(0, "Injection Sucess!", "Made By Nerdie#1155", 0)
 
         of DLL_PROCESS_DETACH:
             discard
@@ -20,4 +20,4 @@ proc DllMain(hModule: HINSTANCE, reasonForCall: DWORD, lpReserved: LPVOID): WINB
             discard
         else:
             discard
-    return TRUE
+    return TRUE 
